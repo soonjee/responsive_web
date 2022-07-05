@@ -1,0 +1,38 @@
+html { font-size: 20px;}
+body { font-size: 0.8rem;}
+
+.container { display: flex; gap: 1.5rem; width: 60rem; margin: 0 auto; }
+
+header { line-height: 5rem; }
+
+.gnb { background: #f1f1f1; }
+.gnb>ul { gap: 0; }
+.gnb>ul>li { flex: 1; text-align: center; }
+.gnb>ul>li~li {border-left: 1px solid #ddd;}
+.gnb>ul>li>a {display: block; list-style: 2rem; }
+
+.step01 { padding: 100px 0; background: rgb(255, 17, 17); text-align: center;}
+.step01 h2 { font-size: 1.25rem; margin: 0 0 0.5rem 0;}
+.step01 p { font-size: 0.75rem; margin: 0 0 1.5rem 0;}
+
+.mbtn { display: none; }
+
+@media (max-width: 1200px){
+    .container { width: auto; }
+    .step01 {background: rgb(255, 153, 0);}
+}
+
+@media (max-width: 768px) {
+    .container {padding: 0 0.75rem;}
+    .step01 { background: rgb #369;}
+}
+
+@media (max-width: 560px) {
+    html { font-size: 16px;}
+    .mbtn { position: fixed; inset: 1rem 1rem auto auto; display: block; }
+    .gnb { display: none; background: #f1f1f1; }
+    .gnb>ul>li~li {border-left: none; border-top: 1px solid #ddd;}
+    .container { flex-direction: column; }
+    .step01 { background: #369; color: #fff ;}
+    .step01 h2 { font-size: 8vw; }
+}
