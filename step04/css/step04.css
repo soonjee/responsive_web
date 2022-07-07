@@ -1,0 +1,164 @@
+/* * {
+    outline: 1px solid#f00;
+} */
+
+.Wrap {
+
+}
+
+.header {
+    line-height: 100px;
+}
+
+.header .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.header .gnb a {
+    display: block;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb .smenu {
+    position: absolute;
+    width: 150px;
+    top: 100px;
+    left: 50%;
+
+    display: none;
+
+    background-color: #fff;
+    line-height: 35px;
+    text-align: center;
+    z-index: 999;
+    transform: translateX(-47%);
+    /* border: 3px solid #444; */
+}
+
+.header .gnb>ul>li:hover .smenu {
+    display: block;
+}
+
+.main_visual {
+    position: relative;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #333;
+    color: #fff;
+}
+
+.footer {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mbtn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .Wrap {}
+
+    .header { line-height: 100px;}
+    
+    .header .container {
+        display: flex;
+        width: auto;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .header .gnb.on {
+        left: 0;
+    }
+
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        border-right: 1px solid #fff;
+        width: calc(100% - 90px);
+        height: 100vh;
+        padding: 100px 15px 0 15px;
+        z-index: 999;
+    }
+
+    .header .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        line-height: 35px;
+    }
+
+    
+    .header .gnb>ul>li {
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .header .gnb .smenu {
+        position: static;
+        top: 90px;
+        left: 50%;
+        display: none;
+    
+        background: #f1f1f1;
+        line-height: 35px;
+
+        width: auto;
+        text-align: center;
+        transform: translateX(0);
+        border:none;
+        z-index: 999;
+    }
+    
+    .header .gnb>ul>li:hover .smenu {
+        display: none;
+    }
+    
+    .main_visual {
+        position: relative;
+        display: flex;
+        height: 300px;
+
+        align-items: center;
+        justify-content: center;
+        background: #333;
+        color: #fff;
+    }
+    
+    .footer {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    
+    .mbtn {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        display: block;
+        padding: 5px;
+        background: #f1f1f1;
+        border-radius: 5px;
+        font-size: 23px;
+        line-height: 1;
+        z-index: 999;
+    }
+
+}
