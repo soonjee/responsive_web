@@ -1,0 +1,93 @@
+/* 플롯 높이가 0이라 가상요소를 만들서 clear로 주기.엥*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    line-height: 100px;
+}
+
+.header .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .container h1 {
+    float: left;
+    padding: 0 15px;
+}
+
+.header .gnb {
+    float: right;
+}
+
+.header .gnb>ul>li {
+    float: left;
+}
+
+.header .gnb>ul>li>a {
+display: block;
+   padding: 0 15px;
+}
+
+
+.float01 {
+    padding: 100px 0;
+    text-align: center;
+    background: #ff0;
+}
+
+.float01 h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.float01 p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.float01 .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.float01 .container figure {
+    float: left;
+    width: 33.33333%;
+    padding: 0 15px;
+}
+
+.mopen {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {line-height: 100px;}
+    .header .container {width: auto; margin: 0 auto;}
+    .header .container h1 {float: left; padding: 0 15px;}
+
+    .header .gnb {float: none; position: fixed; top: 0; left: -100%; width: calc(100% - 90px); height: 100vh; background-color: #fff; border-right: 1px solid #ddd; padding: 50px 15px 0 15px; transition: left 0.5s;}
+
+    .header .gnb.on{
+        left: 0;
+    }
+
+    .header .gnb>ul>li {float: none; border-bottom: 1px solid #ddd;}
+    .header .gnb>ul>li>a {display: block; padding: 0 15px; line-height: 40px;}
+    
+    .float01 {padding: 100px 0; text-align: center; background: #ff0;}
+
+    .float01 h2 { font-size: 21px;font-weight: 700; margin: 0 0 10px 0;}
+    .float01 p {font-size: 15px;font-weight: 300;margin: 0 0 30px 0;}
+
+    .float01 .container {width: auto; margin: 0 auto;}
+    .float01 .container figure {float: none; width: 100%; padding: 0 15px;}
+
+    .mopen { display: block; position: fixed; top: 30px; right: 10px; line-height: 10px;}
+}
