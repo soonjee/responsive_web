@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>responsive web 04-반응형다단메뉴_2022.07.06</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/step04.css">
+    <title>responsive Web 05-슬라이드 반응형_2022.07.07</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="./css/step05.css">
 </head>
 
 <body>
     <div class="Wrap">
-        <header class="header">
+        <header id="header">
             <div class="container">
                 <h1>
                     <a href="/">
@@ -28,7 +29,6 @@
                                 <li><a href="">smenu02</a></li>
                                 <li><a href="">smenu03</a></li>
                                 <li><a href="">smenu04</a></li>
-                                <li><a href="">smenu05</a></li>
                             </ul>
                         </li>
                         <li>
@@ -38,7 +38,6 @@
                                 <li><a href="">smenu02</a></li>
                                 <li><a href="">smenu03</a></li>
                                 <li><a href="">smenu04</a></li>
-                                <li><a href="">smenu05</a></li>
                             </ul>
                         </li>
                         <li>
@@ -48,7 +47,6 @@
                                 <li><a href="">smenu02</a></li>
                                 <li><a href="">smenu03</a></li>
                                 <li><a href="">smenu04</a></li>
-                                <li><a href="">smenu05</a></li>
                             </ul>
                         </li>
                         <li>
@@ -58,7 +56,6 @@
                                 <li><a href="">smenu02</a></li>
                                 <li><a href="">smenu03</a></li>
                                 <li><a href="">smenu04</a></li>
-                                <li><a href="">smenu05</a></li>
                             </ul>
                         </li>
                         <li>
@@ -68,30 +65,34 @@
                                 <li><a href="">smenu02</a></li>
                                 <li><a href="">smenu03</a></li>
                                 <li><a href="">smenu04</a></li>
-                                <li><a href="">smenu05</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                <div class="mbtn">
-                    <i class="xi-bars"></i>
-                </div>
+                <div class="i xi-bars mbtn"></div>
             </div>
+
         </header>
         <main>
-            <section class="main_visual">
-                slide
+            <section id="main_visual">
+                <div class="main_slider">
+                    <figure class="itm01"></figure>
+                    <figure class="itm02"></figure>
+                    <figure class="itm03"></figure>
+                </div>
+                <div class="slogan">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />Excepturi natus, ipsam et
+                        uibusdam qui molestiae mollitia assumenda soluta numquam suscipit.</p>
+                </div>
             </section>
-
         </main>
-        <footer class="footer">
-            &copy; soon
+        <footer id="footer">
         </footer>
     </div>
-
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery.scrollme.min.js"></script>
-    <script src="./js/step04.js"></script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="./js/step05.js"></script>
 </body>
 
 </html>

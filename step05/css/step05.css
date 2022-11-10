@@ -1,0 +1,221 @@
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 150px;
+    z-index: 999;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+}
+
+.gnb a { display: block;}
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+    color: #fff;
+}
+
+.gnb>ul>li { position: relative;}
+
+.gnb>ul>li .smenu {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 160px;
+
+    text-align: center;
+    transform: translateX(-50%);
+
+    background: #fff;
+    color: #444;
+    border: 3px solid #369;
+    line-height: 40px;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.gnb>ul>li:hover .smenu{
+    top: 120px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+#main_visual {
+    position: relative;
+}
+
+#main_visual .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+#main_visual .slogan h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+#main_visual .slogan p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#main_visual .main_slider figure {height: 100vh;}
+
+#main_visual .main_slider .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover ;
+}
+#main_visual .main_slider .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover ;
+}
+#main_visual .main_slider .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover ;
+}
+
+.mbtn {
+    display: none;
+}
+
+@media (max-width:768px) {
+    #header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 150px;
+        z-index: 999;
+    }
+    
+    #header .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 80px;
+    }
+
+    /*  width: calc(100% - 90px); 꼭 띄워쓰기 붙이면 문자로 읽어버림 */
+    .gnb {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: calc(100% - 90px);
+        height: 100vh;
+        background: #fff;
+        border-right: 1px solid #ddd;
+        padding: 100px 15px 0 15px;
+        z-index: 999;
+        line-height: 40px;
+        transition: left 0.5s;
+    }
+
+    .gnb.on {
+        left: 0;
+    }
+    
+    .gnb a { display: block;}
+    .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        color: #444;
+    }
+    
+    .gnb>ul>li {
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .gnb>ul>li .smenu {
+        display: none;
+        position: static;
+        top: 150px;
+        left: 50%;
+        width: auto;
+    
+        text-align: center;
+        transform: translateX(0);
+    
+        background: #f1f1f1;
+        color: #444;
+        border: none;
+        line-height: 40px;
+        opacity: 0.5;
+        visibility: hidden;
+    }
+    
+    .gnb>ul>li:hover .smenu{
+        top: 120px;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.5s;
+    }
+    
+    #main_visual {
+        position: relative;
+    }
+    
+    #main_visual .slogan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 100%;
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+
+        padding: 0 15px;
+    }
+    
+    #main_visual .slogan h2 {
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+    }
+    
+    #main_visual .slogan p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    
+    #main_visual .main_slider figure {
+        height: 100vh;
+    }
+    
+    #main_visual .main_slider .itm01 {
+        background: url(../img/mainvisual01.jpg) no-repeat center center/cover ;
+    }
+    #main_visual .main_slider .itm02 {
+        background: url(../img/mainvisual02.jpg) no-repeat center center/cover ;
+    }
+    #main_visual .main_slider .itm03 {
+        background: url(../img/mainvisual03.jpg) no-repeat center center/cover ;
+    }  
+    
+    .mbtn {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 23px;
+        background: #f1f1f1;
+    }
+}
+
